@@ -1,5 +1,12 @@
+import BackButton from "@/components/back-button/BackButton";
+
 const HomePage = () => {
-  return <div className="bg-green-600 text-white">HomePage</div>;
+  return (
+    <div>
+      <BackButton />
+      <h1>HomePage</h1>
+    </div>
+  );
 };
 
 export default HomePage;
