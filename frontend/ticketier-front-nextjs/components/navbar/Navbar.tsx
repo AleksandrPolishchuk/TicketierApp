@@ -8,7 +8,21 @@ const menuItems = [
 ];
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <div>
+      <div>
+        <Link href="/">Ticketier</Link>
+      </div>
+      <div>
+        {menuItems.map((item) => (
+          <Link key={item.id} href={item.route}>
+            <span>{item.label}</span>
+            <span>{item.icon}</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;
