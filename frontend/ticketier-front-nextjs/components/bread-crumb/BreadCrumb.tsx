@@ -9,20 +9,24 @@ interface Props {
   }[];
 }
 
-const BreadCrumb = ({ items = [] }) => {
-  return 
+const BreadCrumb = ({ items = [] }: Props) => {
+  return (
     <div>
       <Link href="/">
         <AiOutlineHome />
       </Link>
-      {
-        items.map((item, index) => (
-            <div key={index} className="space-x-2"><div>
-                <span>/</span>
-            </div>
-        ))
-      }
-    </div>;
+      {items.map((item, index) => (
+        <div key={index} className="space-x-2">
+          <span>/</span>
+          {index === items.length - 1 ? (
+            <span>{item.label}</span>
+          ) : (
+            <Link href={item.route}>{item.label}</Link>
+          )}
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default BreadCrumb;
