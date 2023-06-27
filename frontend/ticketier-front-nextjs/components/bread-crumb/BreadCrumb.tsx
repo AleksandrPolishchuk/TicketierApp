@@ -11,7 +11,7 @@ interface Props {
 
 const BreadCrumb = ({ items = [] }: Props) => {
   return (
-    <div>
+    <div className="flex justify-start items-center gap-x-2 bg-sky-800 text-white px-4 py-1 rounded-lg">
       <Link href="/">
         <AiOutlineHome />
       </Link>
