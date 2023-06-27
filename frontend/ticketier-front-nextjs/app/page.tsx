@@ -1,17 +1,9 @@
-import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
+import CustomSpinner from "@/components/custom-spinner/CustomSpinner";
 
 const HomePage = () => {
   return (
     <div>
-      <div className="flex">
-        <BreadCrumb
-          items={[
-            { label: "tickets", route: "/tickets" },
-            { label: "edit", route: "/jghgj" },
-            { label: "52", route: "/" },
-          ]}
-        />
-      </div>
+      <CustomSpinner />
       <h1>HomePage</h1>
     </div>
   );
