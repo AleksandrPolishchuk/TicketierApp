@@ -1,9 +1,9 @@
-import BackButton from "@/components/back-button/BackButton";
+import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 
 const HomePage = () => {
   return (
     <div>
-      <BackButton />
+      <BreadCrumb />
       <h1>HomePage</h1>
     </div>
   );
