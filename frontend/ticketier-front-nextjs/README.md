@@ -7,7 +7,7 @@ Tasks
 - Create BackButton Component
 - Create Breadcrumb Component
 - Create Custom Spinner Component
-  Create General InnerTitle Component
+- Create General InnerTitle Component
   Develope Home page
   Create Loading Page
   Create NotFound Page
