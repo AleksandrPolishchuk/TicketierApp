@@ -4,9 +4,9 @@ Tasks
 - Clean up project
 - Install and config Tailwind CSS
 - Create Navbar component
-  Create BackButton Component
-  Create Breadcrumb Component
-  Create Custom Spinner Component
+- Create BackButton Component
+- Create Breadcrumb Component
+- Create Custom Spinner Component
   Create General InnerTitle Component
   Develope Home page
   Create Loading Page

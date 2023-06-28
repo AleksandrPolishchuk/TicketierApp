@@ -1,9 +1,9 @@
-import CustomSpinner from "@/components/custom-spinner/CustomSpinner";
+import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 
 const HomePage = () => {
   return (
     <div>
-      <CustomSpinner />
+      <GeneralInnerTitle />
       <h1>HomePage</h1>
     </div>
   );
