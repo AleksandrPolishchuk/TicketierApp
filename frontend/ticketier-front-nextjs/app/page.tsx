@@ -3,7 +3,7 @@ import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitl
 const HomePage = () => {
   return (
     <div>
-      <GeneralInnerTitle />
+      <GeneralInnerTitle title="Home Page Test Title" />
       <h1>HomePage</h1>
     </div>
   );
