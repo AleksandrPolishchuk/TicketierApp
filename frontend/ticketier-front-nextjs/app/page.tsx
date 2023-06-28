@@ -4,6 +4,7 @@ const HomePage = () => {
       <div className="mt-16">
         <h1 className="relative text-xl sm:text-3xl font-bold">
           Welcome to Ticketier
+          <div className="absolute inset-0 w-full h-8 sm:h-12 rounded-full bg-gradient-to-t from-purple-500 to-blue-300 blur-md opacity-40"></div>
         </h1>
       </div>
     </div>
