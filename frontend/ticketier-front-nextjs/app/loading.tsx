@@ -1,5 +1,5 @@
 const LoadingPage = () => {
-  return <div>LoadingPage</div>;
+  return <div className="pageGeneralClass">LoadingPage</div>;
 };
 
 export default LoadingPage;
