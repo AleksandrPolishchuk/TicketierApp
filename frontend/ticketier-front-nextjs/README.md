@@ -8,7 +8,7 @@ Tasks
 - Create Breadcrumb Component
 - Create Custom Spinner Component
 - Create General InnerTitle Component
-  Develope Home page
+- Develope Home page
   Create Loading Page
   Create NotFound Page
   Create Tickets List page
