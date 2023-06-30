@@ -4,6 +4,6 @@
 
 @layer components {
     .pageGeneralClass {
-        @apply bg-red-400 m-2 p-2 md:m-4 md:p-4 lg:mx-8 lg:mt-4 lg:px-8 lg:py-4 rounded-md;
+        @apply bg-white m-2 p-2 md:m-4 md:p-4 lg:mx-8 lg:mt-4 lg:px-8 lg:py-4 rounded-md;
     }
 }

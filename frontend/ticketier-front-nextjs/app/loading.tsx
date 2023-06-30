@@ -1,5 +1,11 @@
+import CustomSpinner from "@/components/custom-spinner/CustomSpinner";
+
 const LoadingPage = () => {
-  return <div className="pageGeneralClass">LoadingPage</div>;
+  return (
+    <div className="pageGeneralClass">
+      <CustomSpinner />
+    </div>
+  );
 };
 
 export default LoadingPage;
