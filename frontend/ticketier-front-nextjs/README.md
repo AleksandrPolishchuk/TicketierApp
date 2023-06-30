@@ -10,7 +10,7 @@ Tasks
 - Create General InnerTitle Component
 - Develope Home page
 - Create Loading Page
-  Create NotFound Page
+- Create NotFound Page
   Create Tickets List page
   SSR, SSG, ISR, CSR
   Create Error Page (Error boundary)
