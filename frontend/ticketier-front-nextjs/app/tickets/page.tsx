@@ -25,7 +25,7 @@ const TicketsListPage = async () => {
 
   return (
     <div className="pageGeneralClass">
-      <div>
+      <div className="flex justify-start items-center gap-x-4">
         <BackButton destination="/" />
         <BreadCrumb
           items={[
