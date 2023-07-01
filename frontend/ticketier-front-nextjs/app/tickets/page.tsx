@@ -1,5 +1,7 @@
 import React from "react";
 import { Ticket } from "@/typings/generalTypes";
+import BackButton from "@/components/back-button/BackButton";
+import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 
 async function getTickets(url: string) {
   // This is SSR
@@ -21,7 +23,21 @@ const TicketsListPage = async () => {
 
   console.log(tickets);
 
-  return <div>TicketsListPage</div>;
+  return (
+    <div className="pageGeneralClass">
+      <div>
+        <BackButton destination="/" />
+        <BreadCrumb
+          items={[
+            {
+              label: "Tickets",
+              route: "/tickets",
+            },
+          ]}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default TicketsListPage;
