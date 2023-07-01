@@ -1,4 +1,5 @@
 import React from "react";
+import { Ticket } from "@/typings/generalTypes";
 
 async function getTickets(url: string) {
   // This is SSR
@@ -16,7 +17,7 @@ const TicketsListPage = async () => {
   const url = process.env.NEXT_PUBLIC_BASE_URL;
 
   // Fetch data from url
-  const tickets = await getTickets(url);
+  const tickets: Ticket[] = await getTickets(url);
 
   console.log(tickets);
 
