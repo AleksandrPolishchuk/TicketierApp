@@ -21,9 +21,11 @@ const TicketsListPage = async () => {
   // Fetch data from url
   const tickets: Ticket[] = await getTickets(url);
 
-  console.log(tickets);
+  //console.log(tickets);
 
   return (
+    <div>Test</div>
+    /*
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
         <BackButton destination="/" />
@@ -36,7 +38,7 @@ const TicketsListPage = async () => {
           ]}
         />
       </div>
-    </div>
+    </div>*/
   );
 };
 
