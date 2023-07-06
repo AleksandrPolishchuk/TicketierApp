@@ -2,6 +2,8 @@ import React from "react";
 import { Ticket } from "@/typings/generalTypes";
 import BackButton from "@/components/back-button/BackButton";
 import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
+import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
+import { AiOutlinePlusSquare } from "react-icons/ai";
 
 async function getTickets(url: string) {
   // This is SSR
@@ -24,22 +26,24 @@ const TicketsListPage = async () => {
   console.log(tickets);
 
   return (
-    <>
-      <div>Test</div>
-      <div className="pageGeneralClass">
-        <div className="flex justify-start items-center gap-x-4">
-          <BackButton destination="/" />
-          <BreadCrumb
-            items={[
-              {
-                label: "Tickets",
-                route: "/tickets",
-              },
-            ]}
-          />
-        </div>
+    <div className="pageGeneralClass">
+      <div className="flex justify-start items-center gap-x-4">
+        <BackButton destination="/" />
+        <BreadCrumb
+          items={[
+            {
+              label: "Tickets",
+              route: "/tickets",
+            },
+          ]}
+        />
       </div>
-    </>
+
+      <div>
+        <GeneralInnerTitle title="Tickets List" />
+        <AiOutlinePlusSquare />
+      </div>
+    </div>
   );
 };
 
