@@ -1,4 +1,5 @@
 import { Ticket } from "@/typings/generalTypes";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -7,10 +8,41 @@ interface Props {
 
 const TicketsContent = ({ ticketsData }: Props) => {
   return (
-    <div>
-      <h1>TisketsContent</h1>
-      <div>{JSON.stringify(ticketsData)}</div>
-    </div>
+    <table className="w-full">
+      <thead className="bg-slate-200 p-2">
+        <tr>
+          <th className="text-center">Id</th>
+          <th className="text-center">Passenger Name</th>
+          <th className="text-center max-md:hidden">Passenger SSN</th>
+          <th className="text-center max-lg:hidden">From</th>
+          <th className="text-center max-lg:hidden">To</th>
+          <th className="text-center max-md:hidden">Price</th>
+          <th className="text-center">Time</th>
+          <th className="text-center">Operations</th>
+        </tr>
+      </thead>
+      <tbody className="bg-slate-100 p-2">
+        {ticketsData.map((ticket) => (
+          <tr
+            key={ticket.id}
+            className="border-2 border-gray-200 h-10 hover:bg-slate-300 transition-all duration-200"
+          >
+            <td className="text-center">{ticket.id}</td>
+            <td className="text-center">{ticket.passengerName}</td>
+            <td className="text-center max-md:hidden">{ticket.passengerSSN}</td>
+            <td className="text-center max-lg:hidden">{ticket.from}</td>
+            <td className="text-center max-lg:hidden">{ticket.to}</td>
+            <td className="text-center max-md:hidden">{ticket.price}</td>
+            <td className="text-center">{ticket.time}</td>
+            <td className="text-center">
+              <div className="flex justify-center items-center">
+                <Link href="/"></Link>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
