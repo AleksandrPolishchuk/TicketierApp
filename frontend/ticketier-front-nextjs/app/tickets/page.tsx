@@ -5,6 +5,8 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
+import TicketsContent from "./components/TicketsContent";
+import TicketsNoData from "./components/TicketsNoData";
 
 async function getTickets(url: string) {
   // This is SSR
@@ -50,6 +52,13 @@ const TicketsListPage = async () => {
           <span className="text-2xl nax-sm:hidden">Issue Ticket</span>
         </Link>
       </div>
+
+      {/* Render All Tickets */}
+      {tickets.length ? (
+        <TicketsContent ticketsData={tickets} />
+      ) : (
+        <TicketsNoData />
+      )}
     </div>
   );
 };
