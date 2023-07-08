@@ -4,6 +4,7 @@ import BackButton from "@/components/back-button/BackButton";
 import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import { AiOutlinePlusSquare } from "react-icons/ai";
+import Link from "next/link";
 
 async function getTickets(url: string) {
   // This is SSR
@@ -39,9 +40,15 @@ const TicketsListPage = async () => {
         />
       </div>
 
-      <div>
+      <div className="flex justify-between items-center">
         <GeneralInnerTitle title="Tickets List" />
-        <AiOutlinePlusSquare />
+        <Link
+          href="/tickets/create"
+          className="flex items-center gap-2 hover:text-blue-600 transition-all duration-200"
+        >
+          <AiOutlinePlusSquare className="text-3xl" />
+          <span className="text-2xl nax-sm:hidden">Issue Ticket</span>
+        </Link>
       </div>
     </div>
   );
