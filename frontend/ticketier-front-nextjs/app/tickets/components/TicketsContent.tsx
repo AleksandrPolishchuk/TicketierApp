@@ -1,12 +1,20 @@
+"use client";
 import { Ticket } from "@/typings/generalTypes";
 import Link from "next/link";
 import React from "react";
+import {
+  MdOutlinePageview,
+  MdOutlineEdit,
+  MdOutlineDelete,
+} from "react-icons/md";
 
 interface Props {
   ticketsData: Ticket[];
 }
 
 const TicketsContent = ({ ticketsData }: Props) => {
+  console.log(ticketsData);
+
   return (
     <table className="w-full">
       <thead className="bg-slate-200 p-2">
@@ -36,7 +44,24 @@ const TicketsContent = ({ ticketsData }: Props) => {
             <td className="text-center">{ticket.time}</td>
             <td className="text-center">
               <div className="flex justify-center items-center">
-                <Link href="/"></Link>
+                <Link
+                  href={`/tickets/${ticket.id}`}
+                  className="bg-green-600 p-1 rounded-md mx-1"
+                >
+                  <MdOutlinePageview className="text-xl" />
+                </Link>
+                <Link
+                  href={`/tickets/edit/${ticket.id}`}
+                  className="bg-yellow-600 p-1 rounded-md mx-1 max-md:hidden"
+                >
+                  <MdOutlineEdit className="text-xl" />
+                </Link>
+                <Link
+                  href={`/tickets/delete/${ticket.id}`}
+                  className="bg-red-600 p-1 rounded-md mx-1 max-md:hidden"
+                >
+                  <MdOutlineDelete className="text-xl" />
+                </Link>
               </div>
             </td>
           </tr>
