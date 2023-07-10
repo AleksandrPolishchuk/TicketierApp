@@ -1,5 +1,6 @@
 "use client";
 import { Ticket } from "@/typings/generalTypes";
+import moment from "moment";
 import Link from "next/link";
 import React from "react";
 import {
@@ -41,7 +42,11 @@ const TicketsContent = ({ ticketsData }: Props) => {
             <td className="text-center max-lg:hidden">{ticket.from}</td>
             <td className="text-center max-lg:hidden">{ticket.to}</td>
             <td className="text-center max-md:hidden">{ticket.price}</td>
-            <td className="text-center">{ticket.time}</td>
+            <td className="text-center">
+              <span>
+                {moment(ticket.time + "Z").format("yyyy-MM-DD _ HH:mm")}
+              </span>
+            </td>
             <td className="text-center">
               <div className="flex justify-center items-center">
                 <Link
