@@ -7,6 +7,12 @@ import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
 import TicketsContent from "./components/TicketsContent";
 import TicketsNoData from "./components/TicketsNoData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tickets List | DevEmpower",
+  description: "Test Description for tickets list page",
+};
 
 async function getTickets(url: string) {
   // This is SSR
