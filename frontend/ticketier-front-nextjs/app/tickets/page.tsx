@@ -14,9 +14,19 @@ export const metadata: Metadata = {
   description: "Test Description for tickets list page",
 };
 
+// As a Default Rule, All of your fetched data would be cached (SSG)
+
+// SSG -> Static Site Generaion
+// ISR -> Incremental Site Regeneration
+// SSR -> Server Side Rendering
+// CSR -> Client Side Rendering
+
+// This is an external API call and it is better to be outside of your component
+// But in this tutorial, we place it here for easier undrestanding
+
 async function getTickets(url: string) {
   // This is SSR
-  const res = await fetch(url, { cache: "no-store" });
+  const res = await fetch(url, { cache: "force-cache" });
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
