@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 async function getTickets(url: string) {
   // This is SSR
-  const res = await fetch(url, { next: { revalidate: 10 } });
+  const res = await fetch(url, { cache: "no-store" });
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary

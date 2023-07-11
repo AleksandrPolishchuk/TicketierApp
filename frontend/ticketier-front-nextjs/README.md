@@ -12,7 +12,7 @@ Tasks
 - Create Loading Page
 - Create NotFound Page
 - Create Tickets List page (_here_)
-  SSR, SSG, ISR, CSR
+- SSR, SSG, ISR, CSR
   Create Error Page (Error boundary)
   Add Search Functionality to Tickets List page (Debounced Serch)
   Create TicketCreate page
