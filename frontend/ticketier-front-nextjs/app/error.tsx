@@ -5,7 +5,7 @@ import Image from "next/image";
 const ErrorPage = () => {
   return (
     <div className="pageGeneralClass">
-      <div>
+      <div className="flex flex-col justify-center items-center py-12">
         <Image
           src="/error.png"
           width={300}
