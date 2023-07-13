@@ -5,10 +5,10 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
-import TicketsContent from "./TicketsContent";
-import TicketsNoData from "./TicketsNoData";
+import TicketsContent from "./components/TicketsContent";
+import TicketsNoData from "./components/TicketsNoData";
 import { Metadata } from "next";
-import SearchBox from "./SearchBox";
+import SearchBox from "./components/SearchBox";
 
 export const metadata: Metadata = {
   title: "Tickets List | DevEmpower",
