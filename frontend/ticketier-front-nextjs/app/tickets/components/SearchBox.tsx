@@ -1,9 +1,24 @@
 "use client";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useRouter } from "next/navigation";
+
 import React, { useState, useEffect } from "react";
+import useDebounce from "@/hooks/useDebounce";
 
 const SearchBox = () => {
   const [searchValue, setSearchValue] = useState<string>("");
+  const router = useRouter();
+
+  const debouncedSearchValue = useDebounce(searchValue, 2000);
+
+  useEffect(() => {
+    const url =
+      debouncedSearchValue === ""
+        ? "/tickets"
+        : `/tickets/?q=${debouncedSearchValue}`;
+    router.push(url);
+  }, [debouncedSearchValue]);
+
   return (
     <div className="relative mb-4">
       <input
