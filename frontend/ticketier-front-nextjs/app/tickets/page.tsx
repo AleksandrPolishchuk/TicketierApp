@@ -37,8 +37,19 @@ async function getTickets(url: string) {
   return res.json();
 }
 
-const TicketsListPage = async () => {
-  const url = process.env.NEXT_PUBLIC_BASE_URL;
+interface Props {
+  searchParams: {
+    q: string;
+  };
+}
+
+const TicketsListPage = async ({ searchParams }: Props) => {
+  console.log(searchParams);
+
+  let url = process.env.NEXT_PUBLIC_BASE_URL;
+  if (searchParams.q) {
+    url = `${url}?q=${searchParams.q}`;
+  }
 
   // Fetch data from url
   const tickets: Ticket[] = await getTickets(url);
