@@ -1,4 +1,5 @@
 "use client";
+import CustomSpinner from "@/components/custom-spinner/CustomSpinner";
 import { TicketCreateDto } from "@/typings/generalTypes";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -12,7 +13,18 @@ const CreateTicketForm = () => {
   const { register, handleSubmit, formState, reset } = form;
   const { errors } = formState;
 
-  return <div>CreateTicketForm</div>;
+  const onSubmitFunction = async (data: TicketCreateDto) => {
+    console.log(data);
+  };
+
+  return (
+    <>
+      {loading && <CustomSpinner />}
+      <>
+        <form onSubmit={handleSubmit(onSubmitFunction)} className=""></form>
+      </>
+    </>
+  );
 };
 
 export default CreateTicketForm;
