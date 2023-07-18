@@ -51,11 +51,26 @@ const CreateTicketForm = () => {
               className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
               {...register("passengerName", {
                 required: "Passenger Name is required",
-                valueAsDate: true,
               })}
             />
             <span className="bg-red-200 text-red-600 rounded-md">
               {errors?.passengerName?.message}
+            </span>
+          </div>
+
+          <div className="m-4">
+            <label className="text-slate-500">Passenger SSN</label>
+            <input
+              autoComplete="off"
+              type="text"
+              className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
+              {...register("passengerSSN", {
+                required: "Passenger SSN is required",
+                valueAsNumber: true,
+              })}
+            />
+            <span className="bg-red-200 text-red-600 rounded-md">
+              {errors?.passengerSSN?.message}
             </span>
           </div>
         </form>
