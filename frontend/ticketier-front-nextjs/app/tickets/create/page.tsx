@@ -4,6 +4,7 @@ import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitl
 import Link from "next/link";
 import React from "react";
 import { AiOutlinePlusSquare } from "react-icons/ai";
+import CreateTicketForm from "./CreateTicketForm";
 
 const TicketCreatePage = () => {
   return (
@@ -27,6 +28,8 @@ const TicketCreatePage = () => {
       <div>
         <GeneralInnerTitle title="Create Ticket" />
       </div>
+
+      <CreateTicketForm />
     </div>
   );
 };
