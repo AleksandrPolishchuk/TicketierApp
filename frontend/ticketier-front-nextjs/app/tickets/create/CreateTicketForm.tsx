@@ -21,7 +21,17 @@ const CreateTicketForm = () => {
     <>
       {loading && <CustomSpinner />}
       <>
-        <form onSubmit={handleSubmit(onSubmitFunction)} className=""></form>
+        <form
+          onSubmit={handleSubmit(onSubmitFunction)}
+          className={`border-2 border-gray-200 w-96 max-w-full mx-auto mt-4 p-2 rounded-lg ${
+            loading ? "blue-xl" : ""
+          }`}
+          noValidate
+        >
+          <div className="m-4">
+            <label className="text-slate-500">Ticket Time</label>
+          </div>
+        </form>
       </>
     </>
   );
