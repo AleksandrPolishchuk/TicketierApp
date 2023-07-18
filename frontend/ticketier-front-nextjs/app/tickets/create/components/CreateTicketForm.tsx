@@ -30,6 +30,17 @@ const CreateTicketForm = () => {
         >
           <div className="m-4">
             <label className="text-slate-500">Ticket Time</label>
+            <input
+              type="datetime-local"
+              className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
+              {...register("time", {
+                required: "Ticket Time is required",
+                valueAsDate: true,
+              })}
+            />
+            <span className="bg-red-200 text-red-600 rounded-md">
+              {errors?.time?.message}
+            </span>
           </div>
         </form>
       </>
