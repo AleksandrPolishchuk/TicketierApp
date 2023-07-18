@@ -88,6 +88,21 @@ const CreateTicketForm = () => {
               {errors?.from?.message}
             </span>
           </div>
+
+          <div className="m-4">
+            <label className="text-slate-500">To</label>
+            <input
+              autoComplete="off"
+              type="text"
+              className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
+              {...register("to", {
+                required: "To is required",
+              })}
+            />
+            <span className="bg-red-200 text-red-600 rounded-md">
+              {errors?.to?.message}
+            </span>
+          </div>
         </form>
       </>
     </>
