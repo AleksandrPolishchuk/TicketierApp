@@ -103,6 +103,22 @@ const CreateTicketForm = () => {
               {errors?.to?.message}
             </span>
           </div>
+
+          <div className="m-4">
+            <label className="text-slate-500">Price</label>
+            <input
+              autoComplete="off"
+              type="number"
+              className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
+              {...register("price", {
+                required: "Price is required",
+                valueAsNumber: true,
+              })}
+            />
+            <span className="bg-red-200 text-red-600 rounded-md">
+              {errors?.price?.message}
+            </span>
+          </div>
         </form>
       </>
     </>
