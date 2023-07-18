@@ -124,6 +124,13 @@ const CreateTicketForm = () => {
             <button className="bg-sky-800 text-white px-4 py-2 mx-8 my-2 rounded-lg">
               Submit
             </button>
+            <button
+              type="button"
+              onClick={() => reset()}
+              className="bg-orange-800 text-white px-4 py-2 mx-8 my-2 rounded-lg"
+            >
+              Reset Form
+            </button>
           </div>
         </form>
       </>
