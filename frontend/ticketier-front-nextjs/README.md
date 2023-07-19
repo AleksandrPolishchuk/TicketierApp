@@ -15,7 +15,7 @@ Tasks
 - SSR, SSG, ISR, CSR
 - Create Error Page (Error boundary)
 - Add Search Functionality to Tickets List page (Debounced Serch)
-  Create TicketCreate page
+- Create TicketCreate page
   Create TicketDetails page
   Create TicketEdit page
   Create TicketDelete page
