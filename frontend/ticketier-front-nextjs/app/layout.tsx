@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import "@/styles//globals.css";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Ticketier",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body className="bg-gray-100 min-h-screen">
         <Navbar />
         <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

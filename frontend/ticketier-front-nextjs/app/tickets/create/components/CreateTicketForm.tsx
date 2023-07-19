@@ -5,6 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const CreateTicketForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -20,9 +21,12 @@ const CreateTicketForm = () => {
       setLoading(true);
       await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/create`, data);
       router.push("/tickets");
+      router.refresh();
+      toast.success("Ticket created successfully");
     } catch (error) {
       // Handled
       console.log(error);
+      toast.error("Error on Creating new Ticket");
     }
   };
 
