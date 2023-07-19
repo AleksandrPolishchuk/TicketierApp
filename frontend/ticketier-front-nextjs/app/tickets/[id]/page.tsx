@@ -3,7 +3,11 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import React from "react";
 
-const page = () => {
+interface Props {
+  ticket: Ticket;
+}
+
+const TicketsDetailsPage = () => {
   return (
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
@@ -25,4 +29,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default TicketsDetailsPage;
