@@ -3,9 +3,10 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import React from "react";
 
+/*
 interface Props {
   ticket: Ticket;
-}
+}*/
 
 const TicketsDetailsPage = () => {
   return (
