@@ -1,6 +1,7 @@
 "use client";
 import CustomSpinner from "@/components/custom-spinner/CustomSpinner";
 import { TicketCreateDto } from "@/typings/generalTypes";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -15,6 +16,14 @@ const CreateTicketForm = () => {
 
   const onSubmitFunction = async (data: TicketCreateDto) => {
     console.log(data);
+    try {
+      setLoading(true);
+      await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/create`, data);
+      router.push("/tickets");
+    } catch (error) {
+      // Handled
+      console.log(error);
+    }
   };
 
   return (
