@@ -3,12 +3,13 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import React from "react";
 
-/*
 interface Props {
-  ticket: Ticket;
-}*/
+  params: {
+    id: string;
+  };
+}
 
-const TicketsDetailsPage = () => {
+const TicketsDetailsPage = ({ params }: Props) => {
   return (
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
