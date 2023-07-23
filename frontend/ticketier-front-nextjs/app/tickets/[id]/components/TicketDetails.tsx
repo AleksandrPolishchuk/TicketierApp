@@ -19,6 +19,11 @@ const TicketDetails = ({ ticket }: Props) => {
         </span>
         <span className="text-lg">{ticket.passengerName}</span>
       </div>
+
+      <div>
+        <span className="text-lg font-bold text-sky-900 mr-4">Ticket SSN</span>
+        <span className="text-lg">{ticket.passengerSSN}</span>
+      </div>
     </div>
   );
 };
