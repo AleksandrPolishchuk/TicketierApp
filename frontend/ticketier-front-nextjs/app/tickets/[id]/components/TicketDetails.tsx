@@ -1,6 +1,7 @@
 "use client";
 import { Ticket } from "@/typings/generalTypes";
 import moment from "moment";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -47,6 +48,21 @@ const TicketDetails = ({ ticket }: Props) => {
         <span className="text-lg">
           {moment(ticket.time + "Z").format("yyyy-MM-DD _ HH:mm")}
         </span>
+      </div>
+
+      <div className="flex justify-between items-center">
+        <Link
+          href={`/tickets/edit/${ticket.id}`}
+          className="bg-yellow-600 text-white px-4 py-2 rounded-md mx-1"
+        >
+          Edit
+        </Link>
+        <Link
+          href={`/tickets/delete/${ticket.id}`}
+          className="bg-red-600 text-white px-4 py-2 rounded-md mx-1"
+        >
+          Delete
+        </Link>
       </div>
     </div>
   );
