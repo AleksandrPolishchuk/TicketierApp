@@ -1,4 +1,6 @@
+"use client";
 import { Ticket } from "@/typings/generalTypes";
+import moment from "moment";
 import React from "react";
 
 interface Props {
@@ -38,6 +40,13 @@ const TicketDetails = ({ ticket }: Props) => {
       <div>
         <span className="text-lg font-bold text-sky-900 mr-4">Price</span>
         <span className="text-lg">{ticket.price}</span>
+      </div>
+
+      <div>
+        <span className="text-lg font-bold text-sky-900 mr-4">Ticket time</span>
+        <span className="text-lg">
+          {moment(ticket.time + "Z").format("yyyy-MM-DD _ HH:mm")}
+        </span>
       </div>
     </div>
   );
