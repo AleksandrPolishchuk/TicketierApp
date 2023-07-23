@@ -32,19 +32,17 @@ const TicketsDetailsPage = async ({ params }: Props) => {
   return (
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
-        <BackButton destination="/" />
+        <BackButton destination="/tickets" />
         <BreadCrumb
           items={[
-            {
-              label: "Tickets",
-              route: "/tickets",
-            },
+            { label: "Tickets", route: "/tickets" },
+            { label: params.id, route: "/" },
           ]}
         />
       </div>
 
       <div>
-        <GeneralInnerTitle title="Tickets List" />
+        <GeneralInnerTitle title={`Ticket Details for id: ${params.id}`} />
       </div>
     </div>
   );
