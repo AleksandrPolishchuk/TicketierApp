@@ -1,6 +1,11 @@
+import { Ticket } from "@/typings/generalTypes";
 import React from "react";
 
-const TicketDetails = () => {
+interface Props {
+  ticket: Ticket;
+}
+
+const TicketDetails = ({ ticket }: Props) => {
   return <div>TicketDetails</div>;
 };
 

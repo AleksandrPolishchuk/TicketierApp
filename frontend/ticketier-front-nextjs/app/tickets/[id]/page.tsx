@@ -4,6 +4,7 @@ import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitl
 import { Ticket } from "@/typings/generalTypes";
 import { notFound } from "next/navigation";
 import React from "react";
+import TicketDetails from "./components/TicketDetails";
 
 async function getTickets(id: string) {
   const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${id}`;
@@ -44,6 +45,8 @@ const TicketsDetailsPage = async ({ params }: Props) => {
       <div>
         <GeneralInnerTitle title={`Ticket Details for id: ${params.id}`} />
       </div>
+
+      <TicketDetails ticket={ticket} />
     </div>
   );
 };
