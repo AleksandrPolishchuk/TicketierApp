@@ -51,6 +51,14 @@ const DeleteTicket = ({ ticket }: Props) => {
               className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
             />
           </div>
+          <div className="m-4">
+            <label className="text-slate-500"> Passenger SSN</label>
+            <input
+              defaultValue={ticket.passengerSSN}
+              disabled
+              className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
+            />
+          </div>
         </div>
       </>
     </>
