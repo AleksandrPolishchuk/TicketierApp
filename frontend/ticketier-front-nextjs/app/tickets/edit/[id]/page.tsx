@@ -4,6 +4,7 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import { Ticket } from "@/typings/generalTypes";
 import { notFound } from "next/navigation";
+import EditTicketForm from "./components/EditTicketForm";
 
 async function getTicket(id: string) {
   const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${id}`;
@@ -24,9 +25,12 @@ interface Props {
 }
 
 const TicketEditPage = async ({ params }: Props) => {
+  const ticket: Ticket = await getTicket(params.id);
+
   if (!ticket) {
     notFound();
   }
+
   return (
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
@@ -42,6 +46,8 @@ const TicketEditPage = async ({ params }: Props) => {
       <div>
         <GeneralInnerTitle title="Edit Ticket" />
       </div>
+
+      <EditTicketForm ticket={ticket} />
     </div>
   );
 };
