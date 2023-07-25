@@ -59,6 +59,22 @@ const DeleteTicket = ({ ticket }: Props) => {
               className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
             />
           </div>
+
+          <div className="flex justify-between items-center">
+            <button
+              onClick={deleteHandlerFunction}
+              className="bg-red-500 text-white px-4 py-2 mx-8 my-2 rounded-lg flex justify-center items-center gap-x-2"
+            >
+              <MdOutlineDelete className="text-2xl" />
+              <span>Delete</span>
+            </button>
+            <button
+              onClick={() => router.push("/tickets")}
+              className="bg-orange-500 text-white px-4 py-2 mx-8 my-2 rounded-lg"
+            >
+              Back
+            </button>
+          </div>
         </div>
       </>
     </>
