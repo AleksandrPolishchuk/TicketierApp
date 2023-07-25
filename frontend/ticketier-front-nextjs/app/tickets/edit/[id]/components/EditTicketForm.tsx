@@ -24,7 +24,10 @@ const EditTicketForm = ({ ticket }: Props) => {
     console.log(data);
     try {
       setLoading(true);
-      await axios.put(`${process.env.NEXT_PUBLIC_BASE_URL}/edit`, data);
+      await axios.put(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/edit/${ticket.id}`,
+        data
+      );
       router.push("/tickets");
       router.refresh();
       toast.success("Ticket edited successfully");
