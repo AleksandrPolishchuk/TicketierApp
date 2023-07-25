@@ -5,6 +5,18 @@ import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitl
 import { Ticket } from "@/typings/generalTypes";
 import { notFound } from "next/navigation";
 
+async function getTicket(id: string) {
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${id}`;
+  // This is SSR
+  const res = await fetch(url, { cache: "no-store" });
+
+  if (!res.ok) {
+    return undefined;
+  }
+
+  return res.json();
+}
+
 interface Props {
   params: {
     id: string;
