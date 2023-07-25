@@ -18,5 +18,5 @@ Tasks
 - Create TicketCreate page
 - Create TicketDetails page
 - Create TicketEdit page
-  Create TicketDelete page
-  Overview & Outro
+- Create TicketDelete page
+- Overview & Outro
