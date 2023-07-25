@@ -39,7 +39,7 @@ const EditTicketForm = ({ ticket }: Props) => {
     console.log(ticket.time);
     console.log(moment(ticket.time + "Z").format());
 
-    setValue("time", ticket.time);
+    setValue("time", moment(ticket.time + "Z").format("yyyy-MM-DDTHH:mm"));
     setValue("passengerName", ticket.passengerName);
     setValue("passengerSSN", ticket.passengerSSN);
     setValue("from", ticket.from);
