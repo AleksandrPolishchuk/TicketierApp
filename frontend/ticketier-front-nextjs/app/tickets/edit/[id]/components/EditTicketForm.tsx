@@ -24,14 +24,14 @@ const EditTicketForm = ({ ticket }: Props) => {
     console.log(data);
     try {
       setLoading(true);
-      await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/create`, data);
+      await axios.put(`${process.env.NEXT_PUBLIC_BASE_URL}/edit`, data);
       router.push("/tickets");
       router.refresh();
-      toast.success("Ticket created successfully");
+      toast.success("Ticket edited successfully");
     } catch (error) {
       // Handled
       console.log(error);
-      toast.error("Error on Creating new Ticket");
+      toast.error("Error on editing new Ticket");
     }
   };
 
