@@ -43,6 +43,14 @@ const DeleteTicket = ({ ticket }: Props) => {
           <h1 className="mx-4 my-2 text-red-600">
             Are You sure you want to delete Ticket with this information?{" "}
           </h1>
+          <div className="m-4">
+            <label className="text-slate-500"> Passenger Name</label>
+            <input
+              defaultValue={ticket.passengerName}
+              disabled
+              className="border-2 border-gray-300 w-full my-2 rounded-lg px-4 py-1"
+            />
+          </div>
         </div>
       </>
     </>
