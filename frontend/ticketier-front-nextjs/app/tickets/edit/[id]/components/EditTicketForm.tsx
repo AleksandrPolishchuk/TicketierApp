@@ -6,6 +6,7 @@ import { Ticket, TicketCreateDto } from "@/typings/generalTypes";
 import CustomSpinner from "@/components/custom-spinner/CustomSpinner";
 import axios from "axios";
 import toast from "react-hot-toast";
+import moment from "moment";
 
 interface Props {
   ticket: Ticket;
@@ -35,6 +36,9 @@ const EditTicketForm = ({ ticket }: Props) => {
   };
 
   useEffect(() => {
+    console.log(ticket.time);
+    console.log(moment(ticket.time + "Z").format());
+
     setValue("time", ticket.time);
     setValue("passengerName", ticket.passengerName);
     setValue("passengerSSN", ticket.passengerSSN);
