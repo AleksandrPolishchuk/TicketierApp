@@ -3,7 +3,13 @@ import BackButton from "@/components/back-button/BackButton";
 import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 
-const TicketEditPage = () => {
+interface Props {
+  params: {
+    id: string;
+  };
+}
+
+const TicketEditPage = ({ params }: Props) => {
   return (
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
