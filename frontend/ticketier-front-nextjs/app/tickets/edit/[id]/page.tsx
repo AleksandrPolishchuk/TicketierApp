@@ -4,7 +4,7 @@ import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
 import { Ticket } from "@/typings/generalTypes";
 import { notFound } from "next/navigation";
-import EditTicketForm from "./components/EditTicketForm";
+import EditTicketForm from "./components/TicketEditForm";
 
 async function getTicket(id: string) {
   const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${id}`;
