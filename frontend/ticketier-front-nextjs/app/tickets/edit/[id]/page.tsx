@@ -2,6 +2,8 @@ import React from "react";
 import BackButton from "@/components/back-button/BackButton";
 import BreadCrumb from "@/components/bread-crumb/BreadCrumb";
 import GeneralInnerTitle from "@/components/general-inner-title/GeneralInnerTitle";
+import { Ticket } from "@/typings/generalTypes";
+import { notFound } from "next/navigation";
 
 interface Props {
   params: {
@@ -9,7 +11,10 @@ interface Props {
   };
 }
 
-const TicketEditPage = ({ params }: Props) => {
+const TicketEditPage = async ({ params }: Props) => {
+  if (!ticket) {
+    notFound();
+  }
   return (
     <div className="pageGeneralClass">
       <div className="flex justify-start items-center gap-x-4">
