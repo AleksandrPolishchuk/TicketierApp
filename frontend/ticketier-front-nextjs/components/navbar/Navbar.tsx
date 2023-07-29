@@ -4,10 +4,16 @@ import { MdAirplaneTicket } from "react-icons/md";
 
 // I use Dynamic data for my Navbar menu
 // It is a better approach
+
 const menuItems = [
   { id: 1, label: "Home", route: "/", icon: <AiOutlineHome /> },
   { id: 2, label: "Tickets", route: "/tickets", icon: <MdAirplaneTicket /> },
 ];
+/*
+const menuItems = [
+  { id: 1, label: "Home", route: "/", icon: 1 },
+  { id: 2, label: "Tickets", route: "/tickets", icon: 2 },
+];*/
 
 const Navbar = () => {
   return (
@@ -18,7 +24,7 @@ const Navbar = () => {
       <div className="flex items-center gap-x-4">
         {menuItems.map((item) => (
           <Link key={item.id} href={item.route}>
-            <span className="max-md:hidden">{item.label}</span>
+            <span className="max-md:hidden">{item.icon}</span>
             <span className="md:hidden text-3xl">{item.icon}</span>
           </Link>
         ))}
